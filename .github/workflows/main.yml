@@ -5,7 +5,13 @@ on: [workflow_dispatch, pull_request]
 jobs:
   main:
     runs-on: ubuntu-latest
+    permissions:
+      # needed for the checkout action
+      contents: read
+      # needed to annotate the files in a pull request with comments
+      pull-requests: write
     steps:
+      - uses: actions/checkout@v3
       - uses: devops-actions/actionlint@v0.1.2
     
       - name: Access secres
