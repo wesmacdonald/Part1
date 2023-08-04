@@ -1,6 +1,6 @@
 name: Main
 
-on: [workflow_dispatch, pull_request, pull_request_target]
+on: [workflow_dispatch, pull_request]
 
 jobs:
   generate-a-secret-output:
@@ -13,8 +13,8 @@ jobs:
       - name: Write messages to the log
         run: |
           echo "::debug::This is a debug message"
-          echo "::warning file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
-          echo "::error file=.github/workflows/main.yml,line=17,col=10,endColumn=37::Error in main.yml workflow"
+          echo "::warning file=app.js,line=1,col=51,endColumn=52::Missing semicolon"
+          echo "::error file=app.js,line=2,col=1,endColumn=7::Error in app.js"
           
       - id: sets-a-secret
         name: Generate, mask, and output a secret
