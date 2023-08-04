@@ -6,6 +6,8 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
+      - uses: devops-actions/actionlint@v0.1.2
+    
       - name: Access secres
         run: |
           echo "Secret: [${{ secrets.CONNECTION_STRING }}]"
