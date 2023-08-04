@@ -14,7 +14,7 @@ jobs:
         run: |
           echo "::debug::This is a debug message"
           echo "::warning file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
-          echo "::error file=.github/workflows/main.yml,line=17,col=10,endColumn=37::Error in main.yml"
+          echo "::error file=.github/workflows/main.yml,line=17,col=10,endColumn=37::Error in main.yml workflow"
           
       - id: sets-a-secret
         name: Generate, mask, and output a secret
