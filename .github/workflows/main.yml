@@ -3,7 +3,7 @@ name: Main
 on: [workflow_dispatch, pull_request]
 
 jobs:
-  generate-a-secret-output:
+  main:
     runs-on: ubuntu-latest
     steps:
       - name: Access secres
